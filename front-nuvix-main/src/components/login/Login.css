@@ -1,0 +1,91 @@
+.form-card {
+  background: rgba(26, 31, 59, 0.7);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  width: 340px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.form-card h2 {
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+input {
+  width: 90%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  background: rgba(10, 15, 30, 0.8);
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+button {
+  width: 80%;
+  padding: 0.9rem;
+  margin-top: 0.8rem;
+  background: var(--primary);
+  color: var(--text-white);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+  background: var(--primary-hover);
+  transform: scale(1.05);
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: var(--primary-hover);
+  transition: color 0.3s;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: var(--accent);
+}
+
+.message {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.token-box {
+  background: rgba(255,255,255,0.1);
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.message {
+    color: white;
+}

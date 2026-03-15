@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>run</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>process-classes</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:3.1.0:exec</goal>
+            </goals>
+            <properties>
+                <exec.vmArgs>-DMAIL_HOST=smtp.gmail.com -DMAIL_PORT=587 -DMAIL_USER=ruscittomicaela@gmail.com -DMAIL_PASSWORD=bcfxkzzledmncrzz -DMAIL_PROPERTIES_MAIL_SMTP_AUTH=true -DMAIL_PROPERTIES_MAIL_SMTP_SSL_ENABLE=false -DMAIL_TRANSPORT_PROTOCOL=smtp -DDB_URL=jdbc:postgresql://localhost:5432/nuvix_db -DDB_USER=postgres -DDB_PASSWORD=Mickahela -DJWT_SECRET=Mickahela18 -DJWT_EXPIRATION_HOURS=24 -DQR_SECRET=claveQR123 -DMERCADOPAGO_ACCESS_TOKEN=APP_USR-8687690170260494-111722-12c9ce6ded4054410e7cab915889144c-2999278400 -DMERCADOPAGO_SPONSOR_ID=2999278400 -DDEFAULT_IMAGE_URL=http://url.com/img.jpg</exec.vmArgs>
+                <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
+                <exec.appArgs></exec.appArgs>
+                <exec.mainClass>com.covielloDevs.SistemaDeVerificacion.SistemaDeVerificacionApplication</exec.mainClass>
+                <exec.executable>java</exec.executable>
+            </properties>
+        </action>
+        <action>
+            <actionName>debug</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>process-classes</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:3.1.0:exec</goal>
+            </goals>
+            <properties>
+                <exec.vmArgs>-DMAIL_HOST=smtp.gmail.com -DMAIL_PORT=587 -DMAIL_USER=ruscittomicaela@gmail.com -DMAIL_PASSWORD=bcfxkzzledmncrzz -DMAIL_PROPERTIES_MAIL_SMTP_AUTH=true -DMAIL_PROPERTIES_MAIL_SMTP_SSL_ENABLE=false -DMAIL_TRANSPORT_PROTOCOL=smtp -DDB_URL=jdbc:postgresql://localhost:5432/nuvix_db -DDB_USER=postgres -DDB_PASSWORD=Mickahela -DJWT_SECRET=Mickahela18 -DJWT_EXPIRATION_HOURS=24 -DQR_SECRET=claveQR123 -DMERCADOPAGO_ACCESS_TOKEN=APP_USR-8687690170260494-111722-12c9ce6ded4054410e7cab915889144c-2999278400 -DMERCADOPAGO_SPONSOR_ID=2999278400 -DDEFAULT_IMAGE_URL=http://url.com/img.jpg -agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address}</exec.vmArgs>
+                <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
+                <exec.appArgs></exec.appArgs>
+                <exec.mainClass>com.covielloDevs.SistemaDeVerificacion.SistemaDeVerificacionApplication</exec.mainClass>
+                <exec.executable>java</exec.executable>
+                <jpda.listen>true</jpda.listen>
+            </properties>
+        </action>
+        <action>
+            <actionName>profile</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>process-classes</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:3.1.0:exec</goal>
+            </goals>
+            <properties>
+                <exec.vmArgs>-DMAIL_HOST=smtp.gmail.com -DMAIL_PORT=587 -DMAIL_USER=ruscittomicaela@gmail.com -DMAIL_PASSWORD=bcfxkzzledmncrzz -DMAIL_PROPERTIES_MAIL_SMTP_AUTH=true -DMAIL_PROPERTIES_MAIL_SMTP_SSL_ENABLE=false -DMAIL_TRANSPORT_PROTOCOL=smtp -DDB_URL=jdbc:postgresql://localhost:5432/nuvix_db -DDB_USER=postgres -DDB_PASSWORD=Mickahela -DJWT_SECRET=Mickahela18 -DJWT_EXPIRATION_HOURS=24 -DQR_SECRET=claveQR123 -DMERCADOPAGO_ACCESS_TOKEN=APP_USR-8687690170260494-111722-12c9ce6ded4054410e7cab915889144c-2999278400 -DMERCADOPAGO_SPONSOR_ID=2999278400 -DDEFAULT_IMAGE_URL=http://url.com/img.jpg</exec.vmArgs>
+                <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
+                <exec.mainClass>com.covielloDevs.SistemaDeVerificacion.SistemaDeVerificacionApplication</exec.mainClass>
+                <exec.executable>java</exec.executable>
+                <exec.appArgs></exec.appArgs>
+            </properties>
+        </action>
+        <action>
+            <actionName>build</actionName>
+            <packagings>
+                <packaging>*</packaging>
+            </packagings>
+            <goals>
+                <goal>install</goal>
+            </goals>
+            <properties>
+                <skipTests>true</skipTests>
+            </properties>
+        </action>
+        <action>
+            <actionName>rebuild</actionName>
+            <packagings>
+                <packaging>*</packaging>
+            </packagings>
+            <goals>
+                <goal>clean</goal>
+                <goal>install</goal>
+            </goals>
+            <properties>
+                <skipTests>true</skipTests>
+            </properties>
+        </action>
+    </actions>

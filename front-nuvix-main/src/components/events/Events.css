@@ -1,0 +1,138 @@
+/* Nuevo Estilo para el formulario de registro de evento */
+.registro-evento-form {
+  background-color: rgba(26, 26, 26, 0.7);
+  backdrop-filter: blur(5px);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  border: 1px solid #7B2FF7; /* antes #730d0d */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+}
+
+.registro-evento-form .btn {
+    width: 100%;
+}
+
+.file-input-label {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #7B2FF7; /* antes #D9593D */
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-align: center;
+}
+
+.file-input-label:hover {
+  background-color: #00F5D4; /* antes #f27d52 */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(123, 47, 247, 0.2);
+}
+
+.file-name {
+  color: #EAEAEA; /* antes #f2f2f2 */
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+}
+
+.search-container {
+  margin-top: 1rem;
+}
+
+.eventos-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.event-item {
+  background-color: #1A1F3B; /* antes #1a1a1a */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-left: 5px solid #F2E96B; /* antes #d9593d */
+  box-shadow: 0 2px 5px rgba(0, 245, 212, 0.2);
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    gap: .8rem;
+}
+
+.event-item:hover {
+  transform: translateX(5px);
+}
+
+.download-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.no-events-message {
+  text-align: center;
+  color: #EAEAEA; /* antes #ccc */
+  font-style: italic;
+}
+
+.input-field {
+    width: 90%;
+}
+
+.label {
+    color: white;
+    text-align: left;
+    font-size: .8rem;
+    margin-bottom: -.5rem;
+}
+
+.cancel {
+    background-color: red;
+    color: white;
+
+    &:hover {
+        background-color: #ce0000;
+    }
+}
+
+.event-text {
+    color: white;
+}
+
+h3 {
+    color: #7b2ff7;
+}
+
+.btn-pending {
+    background-color: yellow;
+    &:hover {
+        background-color: #bdbd00;
+        color: #0A0F1E;
+    }
+}
+
+.btn-disabled {
+    color: red;
+}
+
+@media (max-width: 768px) {
+    .registro-evento-form .btn {
+        width: 100%;
+    }
+
+    .event-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-send {
+        width: 80%;
+    }
+}
