@@ -152,7 +152,7 @@ export function Events({eventos, setEventos}) {
     const descargarPlantilla = async () => {
         try {
             const token = localStorage.getItem("token");
-            const response = await fetch("https://sistemadeverificacion.onrender.com/v1/participantes/download-template", {
+            const response = await fetch("https://nuvix-el0j.onrender.com/v1/participantes/download-template", {
                 method: "GET",
                 headers: { "Authorization": `Bearer ${token}` }
             });
